@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Agenda telefonica</title>
+
+  <style>
+    body{
+      background-color: rgb(205, 219, 205);
+      text-align: center;
+      
+    }
+    
+    #formular{
+      background-color: rgb(202, 182, 0);
+      padding: 10px;
+      text-align: center;
+      margin-left: 30%;
+      margin-right: 50%;
+      margin-top: 5%;
+      width: 40%;
+      border-radius: 10px;
+    }
+    
+    .btn-albastru{
+      background-color: rgb(44, 44, 131);
+      color: #fff;
+      border-radius: 10px;
+      border-style: none;
+      padding: 7px;
+      margin-top: 5px;
+     
+    }  
+   
+
+    .liste{
+      background-color: rgb(202, 182, 0);
+      padding: 10px;
+      text-align: center;
+      margin-left: 30%;
+      margin-right: 50%;
+      margin-top: 5%;
+      width: 40%;
+      border-radius: 10px;
+      box-sizing: content-box;
+      
+    }
+  
+  </style>
+
+
+</head>
+<body onload="draw();">
+
+<div class="container">
+  <h1>Agenda</h1>
+  <div class="form-container">
+    <form id="formular" onsubmit= "adauga(this,event); createTHead(this, event);">
+      <label>Nume: <input type="text" class="nume"></label>
+      <label>Telefon: <input type="text" class="telefon" onkeypress="onlyDigits(this,event);" value=" "></label>
+      <button name="btn" class="btn-albastru">Adauga Contact</button>
+    </form>
+      <table class="liste">
+        <!--<p class="lista-edit"></p>-->
+      </table>
+  </div>
+</div>
+
+<script src="index agenda.js"></script> 
+</body>
+</html>
